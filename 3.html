@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information</title>
+</head>
+<body>
+
+    <script>
+        const studentArray = [
+            {
+                Name: 'Mark',
+                Age: 20,
+                Section: '2',
+                Course: 'BSIT',
+                Subject: 'ITE 233'
+            },
+            {
+                Name: 'Iverson',
+                Age: 22,
+                Section: '3',
+                Course: 'BSIT',
+                Subject: 'ITE 288'
+            },
+            {
+                Name: 'Justin',
+                Age: 19,
+                Section: '4',
+                Course: 'BSIT',
+                Subject: 'ITE 260'
+            }
+        ];
+
+        const resultElement = document.createElement('h2');
+        resultElement.textContent = 'Student Information';
+        document.body.appendChild(resultElement);
+
+        for (const student of studentArray) {
+            const studentInfo = document.createElement('h2');
+            studentInfo.textContent = `Name: ${student.Name}, Age: ${student.Age}, Section: ${student.Section}, Course: ${student.Course}, Subject: ${student.Subject}`;
+            document.body.appendChild(studentInfo);
+        }
+    </script>
+</body>
+</html>
